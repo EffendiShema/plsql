@@ -1,0 +1,32 @@
+-- Ranking customers by total amount per region
+SELECT
+    c.region,
+    c.customer_id,
+    c.customer_name,
+    SUM(t.amount) AS total_spent,
+    ROW_NUMBER() OVER (
+        PARTITION BY c.region
+        ORDER BY SUM(t.amount) DESC
+    ) AS row_num,
+    RANK() OVER (
+        PARTITION BY c.region
+        ORDER BY SUM(t.amount) DESC
+    ) AS rank_in_region,
+    DENSE_RANK() OVER (
+        PARTITION BY c.region
+        ORDER BY SUM(t.amount) DESC
+    ) AS dense_rank_in_region,
+    PERCENT_RANK() OVER (
+        PARTITION BY c.region
+        ORDER BY SUM(t.amount) DESC
+    ) AS percent_rank_in_region
+FROM transactions t
+JOIN customers c
+    ON t.customer_id = c.customer_id
+GROUP BY
+    c.region,
+    c.customer_id,
+    c.customer_name
+ORDER BY
+    c.region,
+    rank_in_region;

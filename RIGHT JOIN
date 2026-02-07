@@ -1,0 +1,12 @@
+/* RIGHT JOIN: products with or without transactions*/
+SELECT 
+    p.product_id,
+    p.product_name,
+    p.product_type,
+    t.transaction_id,
+    t.transaction_date,
+    t.amount
+FROM transactions AS t
+RIGHT JOIN products AS p
+    ON t.product_id = p.product_id
+ORDER BY p.product_id, t.transaction_date;

@@ -1,0 +1,16 @@
+
+/* This inner join will show valid transactions with customer and product details*/
+SELECT 
+    t.transaction_id,
+    t.transaction_date,
+    c.customer_name,
+    c.region,
+    p.product_name,
+    p.product_type,
+    t.quantity,
+    t.amount
+FROM transactions AS t
+INNER JOIN customers AS c
+    ON t.customer_id = c.customer_id
+INNER JOIN products AS p
+    ON t.product_id = p.product_id;

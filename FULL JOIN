@@ -1,0 +1,24 @@
+-- FULL OUTER JOIN simulation between customers and transactions
+/* Part 1: all customers (including those without transactions)*/
+SELECT 
+    c.customer_id,
+    c.customer_name,
+    c.region,
+    t.transaction_id,
+    t.amount
+FROM customers AS c
+LEFT JOIN transactions AS t
+    ON c.customer_id = t.customer_id
+
+UNION
+
+/* Part 2: all transactions (including those with no matching customer, if any)*/
+SELECT 
+    c.customer_id,
+    c.customer_name,
+    c.region,
+    t.transaction_id,
+    t.amount
+FROM customers AS c
+RIGHT JOIN transactions AS t
+    ON c.customer_id = t.customer_id;
