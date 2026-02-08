@@ -14,6 +14,7 @@ schema and ER diagram.
  *customers
  ![image alt](https://github.com/EffendiShema/plsql/blob/ff24ea4161cbb9f0eb6862b17f3883b31381a473/customers%20table.png)
   *products
+  ![image alt](https://github.com/EffendiShema/plsql/blob/3cddebcad123750e08237ac02adb9e7b2ba1f96c/products%20table.png)
   *region
   *transactions.
 
