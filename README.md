@@ -9,6 +9,7 @@ schema and ER diagram.
 
 
 -database: database pl/sql
+![image alt](https://github.com/EffendiShema/plsql/blob/1037fb59daa75cafe5a4fd8ddca99b87c3946a37/database%20table.png)
 -tables:
  *customers
   *products
