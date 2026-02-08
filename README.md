@@ -16,7 +16,9 @@ schema and ER diagram.
   *products
   ![image alt](https://github.com/EffendiShema/plsql/blob/3cddebcad123750e08237ac02adb9e7b2ba1f96c/products%20table.png)
   *region
+  ![image alt](https://github.com/EffendiShema/plsql/blob/695e621b8d127cd8e3185647982ea1c0163925df/customers%20table.png)
   *transactions.
+  ![image alt](https://github.com/EffendiShema/plsql/blob/695e621b8d127cd8e3185647982ea1c0163925df/transaction%20table.png)
 
   
 JOIN Queries:
